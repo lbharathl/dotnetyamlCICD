@@ -2,7 +2,7 @@ trigger:
   - develop
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'ubuntu latest'
 
 #Your build pipeline references the �BuildConfiguration� variable, which you�ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
 #Your build pipeline references the �BuildConfiguration� variable, which you�ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
@@ -37,3 +37,4 @@ stages:
           inputs:
             PathtoPublish: '$(build.artifactstagingdirectory)'
           condition: succeededOrFailed()
+          
